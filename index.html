@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Safe and Defensive Autonomous Driving Workshop</title>
+    <title>Safe and Defensive Autonomous Driving Workshop · ECCV 2026</title>
     <meta
       name="description"
-      content="ECCV 2026 Workshop on Safe and Defensive Autonomous Driving (SDAD): defensive policy learning, hazard anticipation, and robust evaluation."
+      content="Safe and Defensive Autonomous Driving (SDAD) workshop at ECCV 2026 — Malmö, Sweden."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top">SDAD 2026</a>
+        <a class="brand" href="#top">SDAD 2026 @ ECCV</a>
         <nav aria-label="Primary">
           <ul class="nav-list">
             <li><a href="#about">About</a></li>
-            <li><a href="#news">News</a></li>
             <li><a href="#program">Program</a></li>
             <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#challenges">Challenges</a></li>
-            <li><a href="#cfp">Call for Papers</a></li>
-            <li><a href="#papers">Accepted Papers</a></li>
+            <li><a href="./cfp.html">Call for Papers</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="#organizers">Organizers</a></li>
           </ul>
         </nav>
@@ -30,417 +34,437 @@
     </header>
 
     <section id="top" class="hero">
-      <div class="container">
-        <p class="tag">ECCV 2026 Workshop</p>
-        <h1>Safe and Defensive Autonomous Driving (SDAD)</h1>
-        <p class="subtitle">
-          A full-day workshop dedicated to hazard anticipation, defensive policy
-          learning, and rigorous safety evaluation for next-generation autonomous
-          driving systems.
-        </p>
-        <div class="hero-meta">
-          <p><strong>Date:</strong> October 2026 (ECCV workshop day, TBA)</p>
-          <p><strong>Venue:</strong> ECCV 2026, Milan, Italy (onsite + virtual)</p>
-          <p><strong>Theme:</strong> From passive perception to proactive defense</p>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-left">
+          <h1 class="hero-heading">
+            <span class="hero-heading-line">Safe and Defensive Autonomous Driving</span>
+            <span class="hero-heading-event">Workshop on ECCV 2026</span>
+          </h1>
+          <p class="subtitle">
+            Building autonomous systems that proactively avoid latent hazards,
+            reason under uncertainty, and deliver trustworthy defensive behavior.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="./cfp.html">Call for Papers</a>
+            <a class="button ghost" href="#program">View Program</a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a class="button primary" href="#cfp">Submit Paper</a>
-          <a class="button" href="#program">View Program</a>
-        </div>
+        <aside class="hero-panel glass" aria-label="Conference snapshot">
+          <div class="hero-panel-brand">
+            <div class="hero-panel-logo-wrap">
+              <img
+                src="./assets/images/eccv-2026-logo.svg"
+                alt=""
+                class="hero-panel-logo"
+                width="200"
+                height="48"
+                decoding="async"
+              />
+            </div>
+            <p class="hero-panel-eyebrow">Conference</p>
+            <h2 class="hero-panel-headline">ECCV 2026</h2>
+          </div>
+          <ul class="hero-panel-meta">
+            <li>
+              <span class="hero-meta-label">Dates</span>
+              <span class="hero-meta-value">September 8–12, 2026</span>
+            </li>
+            <li>
+              <span class="hero-meta-label">Venue</span>
+              <span class="hero-meta-value">Malmö, Sweden</span>
+            </li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <main class="container">
-      <section id="summary">
-        <h2>Workshop Summary</h2>
-        <div class="card">
-          <table>
-            <tbody>
-              <tr>
-                <th>Workshop title</th>
-                <td>Safe and Defensive Autonomous Driving</td>
-              </tr>
-              <tr>
-                <th>Acronym</th>
-                <td>SDAD</td>
-              </tr>
-              <tr>
-                <th>Edition</th>
-                <td>1st</td>
-              </tr>
-              <tr>
-                <th>Format</th>
-                <td>Full-day workshop + challenge session + poster session</td>
-              </tr>
-              <tr>
-                <th>Audience</th>
-                <td>
-                  Researchers and engineers in autonomous driving, robotics,
-                  computer vision, and embodied AI
-                </td>
-              </tr>
-              <tr>
-                <th>Primary contact</th>
-                <td>
-                  Qifeng Chen -
-                  <a href="mailto:cqf@ust.hk">cqf@ust.hk</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <main>
+      <section id="about" class="section section-light">
+        <div class="container">
+          <h2>About</h2>
+          <p class="about-intro-lede">
+            <strong>SDAD</strong> (Safe and Defensive Autonomous Driving) is an ECCV&nbsp;2026 full-day
+            workshop in Malmö. We organize around three core problems:
+          </p>
+          <ol class="problem-list">
+            <li>
+              What dangers appear in driving scenes—including latent hazards that are difficult to observe?
+            </li>
+            <li>
+              How can autonomous vehicles learn defensive driving under uncertainty and long-tail situations?
+            </li>
+            <li>
+              How can we evaluate defensive driving behaviors beyond trajectory-centric benchmarks?
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          SDAD focuses on one practical question: how do we make autonomous
-          systems not only capable of driving, but capable of driving
-          defensively under uncertainty, long-tail risks, and adversarial
-          environments. While many workshops emphasize perception and benchmark
-          accuracy, SDAD centers on risk-aware decision making and closed-loop
-          safety behavior.
-        </p>
-        <p>
-          The workshop combines invited talks, peer-reviewed papers, benchmark
-          challenges, and an industry panel to bridge academic innovation and
-          real deployment constraints.
-        </p>
-        <div class="grid three">
-          <article class="card">
-            <h3>Core Questions</h3>
-            <ul>
-              <li>How can we model hidden intent and rare hazards early?</li>
-              <li>
-                Which training paradigms improve defensive maneuvers in
-                near-miss scenarios?
-              </li>
-              <li>
-                How should we evaluate comfort-safety trade-offs and legal
-                compliance together?
-              </li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>What Makes SDAD Different</h3>
-            <ul>
-              <li>Defensive-driving-first benchmark and scoring protocol</li>
-              <li>Scenario stress tests with weather and behavior shifts</li>
-              <li>Joint focus on explainability, accountability, and safety</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Expected Outcomes</h3>
-            <ul>
-              <li>Community baselines for defensive closed-loop driving</li>
-              <li>Shared hazard taxonomy for reproducible evaluations</li>
-              <li>
-                Best-practice recommendations for deployment-oriented research
-              </li>
-            </ul>
-          </article>
+      <section id="program" class="section section-light">
+        <div class="container">
+          <h2>Tentative Program</h2>
+          <p class="section-note">
+            6 invited talks, 3 spotlight talks, 2 poster sessions, and 1 panel.
+          </p>
+          <div class="program-split">
+            <article class="card program-column">
+              <h3 class="program-slot-title">Morning</h3>
+              <ul class="program-rows">
+                <li>
+                  <span class="program-time">09:00–09:15</span>
+                  <span class="program-item">Welcome Speech</span>
+                </li>
+                <li>
+                  <span class="program-time">09:15–09:45</span>
+                  <span class="program-item">Invited Talk 1</span>
+                </li>
+                <li>
+                  <span class="program-time">09:45–10:15</span>
+                  <span class="program-item">Invited Talk 2</span>
+                </li>
+                <li>
+                  <span class="program-time">10:15–10:30</span>
+                  <span class="program-item">Coffee</span>
+                </li>
+                <li>
+                  <span class="program-time">10:30–11:00</span>
+                  <span class="program-item">Spotlight Session (3 × 10 min)</span>
+                </li>
+                <li>
+                  <span class="program-time">11:00–12:00</span>
+                  <span class="program-item">Poster Session 1</span>
+                </li>
+                <li>
+                  <span class="program-time">12:00–13:30</span>
+                  <span class="program-item">Lunch break</span>
+                </li>
+              </ul>
+            </article>
+            <article class="card program-column">
+              <h3 class="program-slot-title">Afternoon</h3>
+              <ul class="program-rows">
+                <li>
+                  <span class="program-time">13:30–14:00</span>
+                  <span class="program-item">Invited Talk 3</span>
+                </li>
+                <li>
+                  <span class="program-time">14:00–14:30</span>
+                  <span class="program-item">Invited Talk 4</span>
+                </li>
+                <li>
+                  <span class="program-time">14:30–15:30</span>
+                  <span class="program-item">Poster Session 2 and Coffee</span>
+                </li>
+                <li>
+                  <span class="program-time">15:30–16:00</span>
+                  <span class="program-item">Invited Talk 5</span>
+                </li>
+                <li>
+                  <span class="program-time">16:00–16:30</span>
+                  <span class="program-item">Invited Talk 6</span>
+                </li>
+                <li>
+                  <span class="program-time">16:30–17:15</span>
+                  <span class="program-item">Panel Discussion</span>
+                </li>
+                <li>
+                  <span class="program-time">17:15–17:30</span>
+                  <span class="program-item">Closing Remark</span>
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="news">
-        <h2>News</h2>
-        <ul class="news-list card">
-          <li><span>[May 2026]</span> SDAD website structure published.</li>
-          <li>
-            <span>[Apr 2026]</span> Challenge tracks and baseline packages
-            released.
-          </li>
-          <li>
-            <span>[Mar 2026]</span> Call for Papers announced with submission
-            guidelines.
-          </li>
-          <li>
-            <span>[Feb 2026]</span> Organizing committee and advisory board
-            confirmed.
-          </li>
-          <li>
-            <span>[Jan 2026]</span> Workshop accepted by ECCV 2026.
-          </li>
-        </ul>
-      </section>
-
-      <section id="program">
-        <h2>Program</h2>
-        <p class="section-note">
-          Tentative full-day schedule. All times are local conference time.
-        </p>
-        <div class="card table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Start</th>
-                <th>End</th>
-                <th>Session</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>09:00</td>
-                <td>09:15</td>
-                <td>Opening Remarks and Workshop Vision</td>
-              </tr>
-              <tr>
-                <td>09:15</td>
-                <td>09:50</td>
-                <td>Keynote 1: Proactive Safety in Real-World AV Stacks</td>
-              </tr>
-              <tr>
-                <td>09:50</td>
-                <td>10:25</td>
-                <td>
-                  Keynote 2: Learning Defensive Policies from Human Near-Miss
-                  Data
-                </td>
-              </tr>
-              <tr>
-                <td>10:25</td>
-                <td>10:45</td>
-                <td>Coffee Break</td>
-              </tr>
-              <tr>
-                <td>10:45</td>
-                <td>11:30</td>
-                <td>Challenge Track Introductions and Rules Briefing</td>
-              </tr>
-              <tr>
-                <td>11:30</td>
-                <td>12:30</td>
-                <td>Oral Session I: Hazard Anticipation and Uncertainty</td>
-              </tr>
-              <tr>
-                <td>12:30</td>
-                <td>14:00</td>
-                <td>Lunch and Poster Session</td>
-              </tr>
-              <tr>
-                <td>14:00</td>
-                <td>14:35</td>
-                <td>Keynote 3: Robust Planning under Distribution Shift</td>
-              </tr>
-              <tr>
-                <td>14:35</td>
-                <td>15:20</td>
-                <td>
-                  Oral Session II: Defensive Planning, RL, and World Models
-                </td>
-              </tr>
-              <tr>
-                <td>15:20</td>
-                <td>15:40</td>
-                <td>Coffee Break</td>
-              </tr>
-              <tr>
-                <td>15:40</td>
-                <td>16:25</td>
-                <td>Industry Panel: Safety Cases and Deployment Lessons</td>
-              </tr>
-              <tr>
-                <td>16:25</td>
-                <td>17:10</td>
-                <td>Challenge Spotlight and Awards</td>
-              </tr>
-              <tr>
-                <td>17:10</td>
-                <td>17:30</td>
-                <td>Closing Remarks and 2027 Outlook</td>
-              </tr>
-            </tbody>
-          </table>
+      <section id="speakers" class="section section-dark">
+        <div class="container">
+          <h2>Invited Speakers</h2>
+          <div class="grid three">
+            <article class="card speaker">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/andreas-geiger.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Andreas Geiger" />
+                <div class="person-meta">
+                  <p class="speaker-status confirmed">Confirmed</p>
+                  <h3>Andreas Geiger</h3>
+                  <p class="speaker-affil">Germany / Academia</p>
+                </div>
+              </div>
+              <p class="person-bio">
+                University of Tuebingen, AVG; CVPR 2024 and 2021 best paper awards.
+              </p>
+            </article>
+            <article class="card speaker">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/marco-pavone.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Marco Pavone" />
+                <div class="person-meta">
+                  <p class="speaker-status tentative">Tentative</p>
+                  <h3>Marco Pavone</h3>
+                  <p class="speaker-affil">USA / Academia + Industry</p>
+                </div>
+              </div>
+              <p class="person-bio">
+                Stanford ASL director and leading scientist at NVIDIA.
+              </p>
+            </article>
+            <article class="card speaker">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/dragomir-anguelov.gif"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Dragomir Anguelov" />
+                <div class="person-meta">
+                  <p class="speaker-status confirmed">Confirmed</p>
+                  <h3>Dragomir Anguelov</h3>
+                  <p class="speaker-affil">USA / Industry</p>
+                </div>
+              </div>
+              <p class="person-bio">VP and Head of Research at Waymo.</p>
+            </article>
+            <article class="card speaker">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/jun-gao.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Jun Gao" />
+                <div class="person-meta">
+                  <p class="speaker-status confirmed">Confirmed</p>
+                  <h3>Jun Gao</h3>
+                  <p class="speaker-affil">USA / Academia</p>
+                </div>
+              </div>
+              <p class="person-bio">
+                Research in 3D vision, graphics, and generative models.
+              </p>
+            </article>
+            <article class="card speaker">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/chong-ruan.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Chong Ruan" />
+                <div class="person-meta">
+                  <p class="speaker-status confirmed">Confirmed</p>
+                  <h3>Chong Ruan</h3>
+                  <p class="speaker-affil">China / Industry</p>
+                </div>
+              </div>
+              <p class="person-bio">
+                Chief Scientist at DeepRoute.Ai; contributed to DeepSeek.
+              </p>
+            </article>
+            <article class="card speaker">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/boyi-li.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Boyi Li" />
+                <div class="person-meta">
+                  <p class="speaker-status confirmed">Confirmed</p>
+                  <h3>Boyi Li</h3>
+                  <p class="speaker-affil">USA / Academia + Industry</p>
+                </div>
+              </div>
+              <p class="person-bio">
+                UC Berkeley postdoc; leads Foundation Motion at NVIDIA Research.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="speakers">
-        <h2>Keynote Speakers</h2>
-        <div class="grid four">
-          <article class="card speaker">
-            <h3>Speaker A (TBA)</h3>
-            <p>Industry Research Lab</p>
-          </article>
-          <article class="card speaker">
-            <h3>Speaker B (TBA)</h3>
-            <p>Leading Autonomous Driving Company</p>
-          </article>
-          <article class="card speaker">
-            <h3>Speaker C (TBA)</h3>
-            <p>Top Academic Institution</p>
-          </article>
-          <article class="card speaker">
-            <h3>Speaker D (TBA)</h3>
-            <p>Safety and Verification Expert</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="challenges">
-        <h2>Challenges</h2>
-        <p>
-          SDAD challenge tracks are designed around defensive behavior under
-          realistic uncertainty. Challenges are hosted by independent teams and
-          follow transparent metric protocols.
-        </p>
-        <div class="grid three">
-          <article class="card">
-            <h3>Track 1: Hazard Anticipation</h3>
-            <p>
-              Forecast potential conflicts 2 to 5 seconds ahead in dense urban
-              scenes with noisy observations.
+      <section id="cfp" class="section section-light">
+        <div class="container">
+          <h2>Call for Papers</h2>
+          <article class="card cfp-teaser">
+            <p class="cfp-teaser-text">
+              We invite non-archival submissions on defensive driving, latent hazards, learning under
+              uncertainty, and evaluation beyond trajectory-centric benchmarks. Reviews run on OpenReview;
+              accepted work is presented as posters, with spotlight and best-paper selections.
             </p>
-            <ul>
-              <li>Metrics: time-to-hazard AUC, false-alarm rate, calibration</li>
-              <li>Focus: intent prediction and uncertainty calibration</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Track 2: Defensive Planning</h3>
-            <p>
-              Generate safe and smooth trajectories under aggressive neighboring
-              agent behaviors.
+            <p class="cfp-teaser-meta">
+              <strong>Submission deadline:</strong> July&nbsp;15, 2026
             </p>
-            <ul>
-              <li>Metrics: collision rate, rule compliance, comfort score</li>
-              <li>Focus: safety-efficiency balance in long-tail events</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Track 3: Robust Closed-Loop Evaluation</h3>
-            <p>
-              Evaluate model resilience under weather shift, sensor dropout, and
-              map perturbations.
-            </p>
-            <ul>
-              <li>Metrics: robustness index, intervention rate, recovery time</li>
-              <li>Focus: stability and graceful degradation under stress</li>
-            </ul>
+            <div class="cfp-teaser-actions">
+              <a class="button primary" href="./cfp.html">Dates, rules &amp; review</a>
+            </div>
           </article>
         </div>
-        <p class="section-note">
-          Challenge details, baseline code, and submission portals will be
-          linked here as they are released.
-        </p>
       </section>
 
-      <section id="cfp">
-        <h2>Call for Papers</h2>
-        <div class="grid two">
-          <article class="card">
-            <h3>Important Dates</h3>
-            <ul>
-              <li><strong>Paper submission deadline:</strong> July 15, 2026</li>
-              <li><strong>Notification to authors:</strong> August 15, 2026</li>
-              <li><strong>Camera-ready deadline:</strong> August 22, 2026</li>
-              <li><strong>Workshop date:</strong> ECCV 2026 workshop day</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Submission Guidelines</h3>
-            <ul>
-              <li>Use the ECCV 2026 workshop template.</li>
-              <li>Maximum 8 pages, excluding references.</li>
-              <li>Double-blind review policy is strictly enforced.</li>
-              <li>Supplementary materials are encouraged.</li>
-              <li>Accepted papers will be presented as posters or talks.</li>
-            </ul>
-          </article>
+      <section id="organizers" class="section section-light">
+        <div class="container">
+          <h2>Organizers</h2>
+          <div class="grid three organizer-cards">
+            <article class="card organizer">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/qifeng-chen.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Qifeng Chen" />
+                <div class="person-meta">
+                  <h3>Qifeng Chen</h3>
+                </div>
+              </div>
+              <p class="person-bio">
+                HKUST, Associate Professor; MIT TR35 China and Google Faculty Research Award.
+              </p>
+            </article>
+            <article class="card organizer">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/alexandre-alahi.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Alexandre Alahi" />
+                <div class="person-meta">
+                  <h3>Alexandre Alahi</h3>
+                </div>
+              </div>
+              <p class="person-bio">EPFL, Associate Professor; leads the VITA lab.</p>
+            </article>
+            <article class="card organizer">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/bo-li.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Bo Li" />
+                <div class="person-meta">
+                  <h3>Bo Li</h3>
+                </div>
+              </div>
+              <p class="person-bio">UIUC, Associate Professor; Sloan Fellow, NSF CAREER.</p>
+            </article>
+            <article class="card organizer">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/yiyi-liao.jpeg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Yiyi Liao" />
+                <div class="person-meta">
+                  <h3>Yiyi Liao</h3>
+                </div>
+              </div>
+              <p class="person-bio">
+                Zhejiang University, Assistant Professor; active workshop organizer across CVPR and ICCV.
+              </p>
+            </article>
+            <article class="card organizer">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/li-erran-li.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Li Erran Li" />
+                <div class="person-meta">
+                  <h3>Li Erran Li</h3>
+                </div>
+              </div>
+              <p class="person-bio">
+                AWS AI, head of science; former Pony.ai chief scientist, ACM and IEEE Fellow.
+              </p>
+            </article>
+            <article class="card organizer">
+              <div class="person-row">
+                <img class="person-photo"
+                  src="./assets/images/people/tongyi-cao.jpg"
+                  width="112"
+                  height="112"
+                  decoding="async"
+                  loading="lazy"
+                  alt="Portrait of Tongyi Cao" />
+                <div class="person-meta">
+                  <h3>Tongyi Cao</h3>
+                </div>
+              </div>
+              <p class="person-bio">CTO of DeepRoute.Ai; deployment scale over 200k assisted vehicles.</p>
+            </article>
+          </div>
+          <div class="student-co-org">
+            <h3 class="student-co-org-title">Student Co-Organizers</h3>
+            <p class="student-co-org-names">
+              Zhili Chen, Wen Qiang, Jiaqi Tang, I Cheih Chen
+            </p>
+          </div>
         </div>
-        <article class="card">
-          <h3>Topics of Interest</h3>
-          <ul class="columns">
-            <li>Defensive policy learning for autonomous driving</li>
-            <li>Hazard anticipation and risk-sensitive prediction</li>
-            <li>Uncertainty-aware planning and control</li>
-            <li>Long-tail scenario mining and active data curation</li>
-            <li>Simulation-to-real transfer for safety-critical policies</li>
-            <li>Adversarial robustness and failure mode analysis</li>
-            <li>Safety verification, formal methods, and interpretability</li>
-            <li>Human-centric comfort, trust, and interaction modeling</li>
-            <li>Vision-language driving agents with defensive priors</li>
-            <li>Benchmarks and reproducible safety evaluations</li>
+      </section>
+
+      <section id="sponsors" class="section section-dark sponsors-section">
+        <div class="container">
+          <h2>Sponsors</h2>
+          <p class="section-note sponsors-intro">
+            The workshop is gratefully sponsored by DeepRoute (“元戎启行”).
+          </p>
+          <ul class="sponsors-list">
+            <li>
+              <a
+                class="sponsor-card"
+                href="https://www.deeproute.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="sponsor-logo-frame">
+                  <img
+                    class="sponsor-logo"
+                    src="./assets/images/sponsors/deeproute-logo.png"
+                    width="176"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                    alt="DeepRoute logo (元戎启行)"
+                  />
+                </span>
+                <span class="sponsor-name-zh" lang="zh-CN">元戎启行</span>
+                <span class="sponsor-name-en">DeepRoute</span>
+              </a>
+            </li>
           </ul>
-        </article>
-        <article class="card">
-          <h3>Submission Portal</h3>
-          <p>
-            Submission site will be announced soon. For updates, subscribe to
-            the News section and contact the organizing committee.
-          </p>
-        </article>
-      </section>
-
-      <section id="papers">
-        <h2>Accepted Papers</h2>
-        <p>
-          The accepted paper list will be published after review decisions.
-          Below is the publication format that will be used:
-        </p>
-        <ul class="paper-list card">
-          <li>
-            <strong>Paper title (example):</strong> Defensive World Models for
-            Urban Near-Miss Scenarios
-            <span>Authors: Author 1, Author 2, Author 3</span>
-          </li>
-          <li>
-            <strong>Paper title (example):</strong> Risk-Calibrated End-to-End
-            Planning with Uncertainty Tokens
-            <span>Authors: Author 1, Author 2, Author 3</span>
-          </li>
-          <li>
-            <strong>Paper title (example):</strong> Benchmarking Defensive
-            Driving under Sensor and Intent Shift
-            <span>Authors: Author 1, Author 2, Author 3</span>
-          </li>
-        </ul>
-      </section>
-
-      <section id="organizers">
-        <h2>Organizers</h2>
-        <div class="grid three">
-          <article class="card">
-            <h3>General Chairs</h3>
-            <ul>
-              <li>Qifeng Chen (HKUST)</li>
-              <li>Organizer Name (Affiliation)</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Program Chairs</h3>
-            <ul>
-              <li>Organizer Name (Affiliation)</li>
-              <li>Organizer Name (Affiliation)</li>
-              <li>Organizer Name (Affiliation)</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Challenge Chairs</h3>
-            <ul>
-              <li>Organizer Name (Affiliation)</li>
-              <li>Organizer Name (Affiliation)</li>
-              <li>Organizer Name (Affiliation)</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
-        <div class="card">
-          <p>
-            For sponsorship, speaking, or submission-related inquiries, contact
-            the SDAD team at
-            <a href="mailto:cqf@ust.hk">cqf@ust.hk</a>.
-          </p>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="container footer-wrap">
-        <p>Safe and Defensive Autonomous Driving Workshop (SDAD) · ECCV 2026</p>
-        <p>Built for a safety-first autonomous driving community.</p>
+        <p>Safe and Defensive Autonomous Driving (SDAD) · ECCV 2026</p>
+        <p>Contact: <a href="mailto:cqf@ust.hk">cqf@ust.hk</a></p>
       </div>
     </footer>
   </body>
