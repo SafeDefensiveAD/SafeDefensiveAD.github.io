@@ -135,7 +135,7 @@ a:focus-visible {
   background-color: #070f1e;
   background-image:
     linear-gradient(165deg, rgba(6, 12, 24, 0.35), rgba(10, 22, 44, 0.2)),
-    url("./assets/images/eccv-malmo-hero.jpg");
+    url("/assets/images/eccv-malmo-hero.jpg");
   background-position: center 40%;
   background-size: cover;
   background-repeat: no-repeat;

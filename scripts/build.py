@@ -24,6 +24,9 @@ def main() -> None:
     shutil.copy2(cfp, dist / "cfp.html")
   if assets.exists():
     shutil.copytree(assets, dist / "assets", dirs_exist_ok=True)
+  nojekyll = root / ".nojekyll"
+  if nojekyll.exists():
+    shutil.copy2(nojekyll, dist / ".nojekyll")
   print(f"Build complete: {dist}")
 
 
