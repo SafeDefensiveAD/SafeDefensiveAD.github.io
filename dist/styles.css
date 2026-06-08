@@ -251,6 +251,19 @@ a:focus-visible {
   color: #fff;
 }
 
+.button.outline {
+  background: #fff;
+  color: var(--text-dark);
+  border-color: rgba(21, 34, 56, 0.22);
+}
+
+.button.outline:hover {
+  border-color: rgba(21, 34, 56, 0.42);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(21, 34, 56, 0.12);
+  color: var(--text-dark);
+}
+
 .glass {
   border: 1px solid rgba(200, 220, 255, 0.22);
   background: linear-gradient(
@@ -758,6 +771,12 @@ main {
   margin-top: 22px;
   display: flex;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-card-wide .cfp-teaser-actions {
+  justify-content: flex-start;
 }
 
 .section-light .cfp-teaser .button.primary {
