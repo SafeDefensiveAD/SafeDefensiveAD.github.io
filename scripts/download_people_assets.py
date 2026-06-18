@@ -33,6 +33,16 @@ ASSETS: list[tuple[str, str, str]] = [
     "https://research.nvidia.com/sites/default/files/person/Boyi_Li.jpg",
     "Boyi Li — NVIDIA Research person page.",
   ),
+  (
+    "dan-levi.jpg",
+    (
+      "https://lh3.googleusercontent.com/sitesv/AA5AbUDXbIvhw3S4WJJAFwzPcnpeFZ4FAGXpuh99PbIZypJ"
+      "QchbN9pEu1rW4ItV_2g1tqHjF-H3q3eRDxlirzr4V3uuLQhiAE6HDQXsahDcaSid3e9tKiLy6sdWbRBYLghzYf6"
+      "VyvAmJxbMetuWK3JPrJNqI5BOkWKkurteL4JIee8tam6tAE1Yi4aZjSN8xTaY4KVKikV46MIGm=w1280"
+    ),
+    # Google Sites CDN URL can change — re-run dump_img_candidates.py on the homepage when needed.
+    "Dan Levi — Google Sites homepage (https://sites.google.com/view/danlevi/home).",
+  ),
   ("qifeng-chen.jpg", "https://cqf.io/fig/qifeng-chen.jpg", "Qifeng Chen — https://cqf.io/."),
   (
     "alexandre-alahi.jpg",
