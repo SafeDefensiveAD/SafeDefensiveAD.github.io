@@ -30,9 +30,15 @@
       "pdf": "4_Training_Free_Traffic_Sign_D.pdf"
     },
     "5": {
-      "authors": [],
-      "affiliations": [],
-      "pdf": null
+      "authors": [
+        "Ziang Wei",
+        "Minjun Yu",
+        "Zheyuan Lai",
+        "Mingjie Pang",
+        "Wei Li"
+      ],
+      "affiliations": ["EABOT.AI"],
+      "pdf": "5_When_Shared_Rollouts_Fail_in.pdf"
     },
     "6": {
       "authors": [
