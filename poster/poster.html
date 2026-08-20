@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SDAD @ ECCV 2026 — Poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: 420mm 594mm;
+        margin: 0;
+      }
+
+      :root {
+        --paper: #f3efe6;
+        --paper-2: #fbf9f4;
+        --ink: #15202d;
+        --ink-2: #45525f;
+        --ink-3: #717d89;
+        --band: #14202e;
+        --amber: #f3a01c;
+        --amber-deep: #c9790a;
+        --teal: #1f9aa6;
+        --red: #e0492a;
+        --line: rgba(21, 32, 45, 0.16);
+        --line-2: rgba(21, 32, 45, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      html,
+      body {
+        width: 420mm;
+        height: 594mm;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+        color: var(--ink);
+        background: var(--paper);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .display {
+        font-family: "Space Grotesk", "Inter", sans-serif;
+      }
+
+      /* ---------- kickers / headings ---------- */
+      .kicker {
+        font-size: 11.5pt;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--amber-deep);
+        display: flex;
+        align-items: center;
+        gap: 3.5mm;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 11mm;
+        height: 1.6mm;
+        border-radius: 1mm;
+        background: var(--amber);
+      }
+
+      .h-sec {
+        font-size: 28pt;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--ink);
+        margin-top: 3mm;
+        line-height: 1;
+      }
+
+      /* ===================== HEADER BAND ===================== */
+      .band {
+        position: relative;
+        color: #fff;
+        padding: 15mm 16mm 11mm;
+        overflow: hidden;
+        background-color: var(--band);
+      }
+
+      .band-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 58%;
+        z-index: 0;
+      }
+
+      .band-veil {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          linear-gradient(100deg, rgba(18, 29, 42, 0.97) 26%, rgba(18, 29, 42, 0.6) 60%, rgba(18, 29, 42, 0.26) 100%),
+          linear-gradient(to bottom, rgba(18, 29, 42, 0.04), rgba(18, 29, 42, 0.5));
+      }
+
+      .band .motif {
+        position: absolute;
+        right: -66mm;
+        top: -46mm;
+        width: 226mm;
+        height: 226mm;
+        opacity: 0.44;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .band-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+      }
+
+      .eyebrow {
+        font-size: 11pt;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--amber);
+      }
+
+      .eyebrow .sep {
+        color: rgba(255, 255, 255, 0.4);
+        margin: 0 2.5mm;
+      }
+
+      .eyebrow .loc {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .logo-chip {
+        background: #fff;
+        border-radius: 2.6mm;
+        padding: 3mm 4mm;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .logo-chip img {
+        height: 13mm;
+        display: block;
+      }
+
+      .title {
+        position: relative;
+        z-index: 2;
+        font-size: 58pt;
+        font-weight: 700;
+        line-height: 0.97;
+        letter-spacing: -0.02em;
+        margin-top: 10mm;
+      }
+
+      .title .am {
+        color: var(--amber);
+      }
+
+      .subtitle {
+        position: relative;
+        z-index: 2;
+        font-size: 14.5pt;
+        font-weight: 400;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.84);
+        max-width: 182mm;
+        margin-top: 7mm;
+      }
+
+      .chips {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        gap: 4mm;
+        margin-top: 9mm;
+      }
+
+      .chip {
+        border: 0.4mm solid rgba(243, 160, 28, 0.6);
+        border-radius: 2.2mm;
+        padding: 2.6mm 4mm;
+        font-size: 12.5pt;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 2.5mm;
+      }
+
+      .chip .ck {
+        font-size: 8.5pt;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--amber);
+      }
+
+      /* lane-line signature */
+      .lane {
+        height: 2.4mm;
+        margin-top: 9mm;
+        position: relative;
+        z-index: 2;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--amber) 0,
+          var(--amber) 11mm,
+          transparent 11mm,
+          transparent 18mm
+        );
+        border-radius: 1mm;
+      }
+
+      /* ===================== BODY WRAP ===================== */
+      .wrap {
+        position: relative;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4mm;
+        padding: 11mm 16mm 11mm;
+      }
+
+      .wrap::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(31, 154, 166, 0.06) 0.2mm, transparent 0.2mm),
+          linear-gradient(90deg, rgba(31, 154, 166, 0.06) 0.2mm, transparent 0.2mm);
+        background-size: 19mm 19mm;
+      }
+
+      .wrap > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* section divider with amber tick */
+      .sdiv {
+        position: relative;
+        height: 0.3mm;
+        background: var(--line);
+      }
+
+      .sdiv::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -0.7mm;
+        width: 18mm;
+        height: 1.7mm;
+        background: var(--teal);
+        border-radius: 1mm;
+      }
+
+      /* ---------- Scope ---------- */
+      .q-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8mm;
+        margin-top: 6mm;
+      }
+
+      .q {
+        border-top: 1.2mm solid var(--ink);
+        padding-top: 4mm;
+      }
+
+      .q .n {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 34pt;
+        font-weight: 700;
+        color: var(--amber);
+        line-height: 1;
+      }
+
+      .q .t {
+        font-size: 14pt;
+        line-height: 1.42;
+        color: var(--ink);
+        margin-top: 3.5mm;
+      }
+
+      .q .t b {
+        font-weight: 700;
+      }
+
+      /* ---------- CFP region ---------- */
+      .cfp {
+        display: grid;
+        grid-template-columns: 1.55fr 1fr;
+        gap: 9mm;
+        margin-top: 6mm;
+      }
+
+      .cfp-intro {
+        font-size: 14.5pt;
+        line-height: 1.45;
+        color: var(--ink-2);
+        margin-bottom: 5mm;
+      }
+
+      .sub-label {
+        font-size: 11pt;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        margin-bottom: 3mm;
+      }
+
+      .topics {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm 7mm;
+      }
+
+      .topics li {
+        font-size: 14pt;
+        font-weight: 500;
+        line-height: 1.28;
+        color: var(--ink);
+        padding-left: 7mm;
+        position: relative;
+      }
+
+      .topics li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1.9mm;
+        width: 3mm;
+        height: 3mm;
+        background: var(--amber);
+        border-radius: 0.7mm;
+        transform: rotate(45deg);
+      }
+
+      .rule {
+        height: 0.3mm;
+        background: var(--line);
+        margin: 6mm 0;
+      }
+
+      .facts {
+        display: flex;
+        gap: 9mm;
+      }
+
+      .fact {
+        flex: 1;
+      }
+
+      .fact p {
+        font-size: 13pt;
+        line-height: 1.42;
+        color: var(--ink-2);
+      }
+
+      .fact p b {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      /* right rail */
+      .rail {
+        display: flex;
+        flex-direction: column;
+        gap: 6mm;
+      }
+
+      .panel {
+        border: 0.4mm solid var(--line);
+        border-radius: 4mm;
+        background: var(--paper-2);
+        padding: 6mm;
+      }
+
+      .panel .ph {
+        font-size: 11pt;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--amber-deep);
+        margin-bottom: 4mm;
+      }
+
+      .drow {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 3mm 0;
+      }
+
+      .drow + .drow {
+        border-top: 0.3mm solid var(--line-2);
+      }
+
+      .drow .k {
+        font-size: 13pt;
+        color: var(--ink-2);
+        font-weight: 500;
+      }
+
+      .drow .v {
+        font-size: 14.5pt;
+        font-weight: 700;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--ink);
+      }
+
+      .deadline {
+        background: var(--ink);
+        border-radius: 3mm;
+        padding: 5mm 5mm;
+        color: #fff;
+        margin-bottom: 2mm;
+      }
+
+      .deadline .dl-top {
+        display: flex;
+        align-items: center;
+        gap: 3mm;
+        margin-bottom: 1.5mm;
+      }
+
+      .deadline .tag {
+        font-size: 9pt;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: var(--red);
+        color: #fff;
+        padding: 1mm 2.4mm;
+        border-radius: 1.4mm;
+      }
+
+      .deadline .k {
+        font-size: 12pt;
+        color: rgba(255, 255, 255, 0.74);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .deadline .v {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 24pt;
+        font-weight: 700;
+        color: var(--amber);
+        letter-spacing: -0.01em;
+      }
+
+      .submit {
+        background: var(--band);
+        border-radius: 4mm;
+        padding: 6mm;
+        display: flex;
+        align-items: center;
+        gap: 6mm;
+        color: #fff;
+      }
+
+      .submit .qr {
+        background: #fff;
+        border-radius: 2.4mm;
+        padding: 2.6mm;
+        flex: 0 0 auto;
+      }
+
+      .submit .qr img {
+        width: 31mm;
+        height: 31mm;
+        display: block;
+      }
+
+      .submit .stext .s1 {
+        font-size: 11pt;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--amber);
+      }
+
+      .submit .stext .s2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 19pt;
+        font-weight: 700;
+        margin-top: 1.5mm;
+      }
+
+      .submit .stext .s3 {
+        font-size: 12.5pt;
+        color: rgba(255, 255, 255, 0.78);
+        margin-top: 2mm;
+        line-height: 1.38;
+      }
+
+      /* ---------- People (speakers + organizers, shared) ---------- */
+      .people {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6mm;
+        margin-top: 6mm;
+      }
+
+      .person {
+        text-align: center;
+      }
+
+      .person img {
+        width: var(--ps, 44mm);
+        height: var(--ps, 44mm);
+        object-fit: cover;
+        border-radius: 3.6mm;
+        display: block;
+        margin: 0 auto;
+        background: #dfd9cc;
+        border: 0.3mm solid var(--line);
+      }
+
+      .person .nm {
+        font-size: 14.5pt;
+        font-weight: 700;
+        color: var(--ink);
+        margin-top: 3.5mm;
+        line-height: 1.12;
+      }
+
+      .person .af {
+        font-size: 11.5pt;
+        font-weight: 500;
+        color: var(--ink-3);
+        margin-top: 1.2mm;
+        line-height: 1.2;
+      }
+
+      .students {
+        margin-top: 5mm;
+        font-size: 13pt;
+        color: var(--ink-2);
+        line-height: 1.4;
+      }
+
+      .students b {
+        color: var(--amber-deep);
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 10.5pt;
+        margin-right: 1.5mm;
+      }
+
+      /* ---------- Footer ---------- */
+      .footer {
+        position: relative;
+        overflow: hidden;
+        background: var(--band);
+        color: #fff;
+        padding: 8mm 16mm;
+        display: flex;
+        align-items: center;
+        gap: 8mm;
+      }
+
+      .footer .fmotif {
+        position: absolute;
+        right: -30mm;
+        top: -64mm;
+        width: 120mm;
+        height: 120mm;
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      .sponsor {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 4mm;
+      }
+
+      .sponsor .lab {
+        font-size: 10pt;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.62);
+      }
+
+      .sponsor .chip2 {
+        background: #fff;
+        border-radius: 2.4mm;
+        padding: 2.6mm 4mm;
+        display: inline-flex;
+        align-items: center;
+        gap: 3mm;
+      }
+
+      .sponsor .chip2 img {
+        height: 9.5mm;
+        display: block;
+      }
+
+      .sponsor .zh {
+        color: var(--ink);
+        font-weight: 800;
+        font-size: 13pt;
+      }
+
+      .fspace {
+        flex: 1 1 auto;
+      }
+
+      .foot-right {
+        position: relative;
+        z-index: 2;
+        text-align: right;
+      }
+
+      .foot-right .site {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 20pt;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .foot-right .ct {
+        font-size: 12.5pt;
+        color: rgba(255, 255, 255, 0.74);
+        margin-top: 1mm;
+      }
+
+      .foot-right .ct a {
+        color: var(--amber);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="band">
+      <img class="band-img" src="art-road.jpg" alt="" />
+      <div class="band-veil"></div>
+      <div class="band-top">
+        <div class="eyebrow">
+          ECCV 2026 Workshop <span class="sep">/</span> <span class="loc">Malmö, Sweden</span>
+        </div>
+        <span class="logo-chip"><img src="../assets/images/eccv-2026-logo.svg" alt="ECCV 2026" /></span>
+      </div>
+
+      <h1 class="title display">
+        Safe &amp; <span class="am">Defensive</span><br />Autonomous Driving
+      </h1>
+
+      <p class="subtitle">
+        A full-day workshop on building autonomous systems that anticipate latent hazards,
+        reason under uncertainty, and act with trustworthy, defensive behavior.
+      </p>
+
+      <div class="chips">
+        <span class="chip"><span class="ck">Venue</span> Malmö, Sweden</span>
+        <span class="chip"><span class="ck">Dates</span> September 8–12, 2026</span>
+        <span class="chip"><span class="ck">Track</span> Non-archival</span>
+      </div>
+
+      <div class="lane"></div>
+    </header>
+
+    <!-- ===================== BODY ===================== -->
+    <div class="wrap">
+      <!-- Scope -->
+      <section>
+        <div class="kicker">Workshop Scope</div>
+        <h2 class="h-sec display">Three questions we tackle</h2>
+        <div class="q-grid">
+          <div class="q">
+            <div class="n">01</div>
+            <div class="t">
+              What <b>dangers</b> arise in driving scenes — especially the <b>latent hazards</b>
+              that are hard to observe?
+            </div>
+          </div>
+          <div class="q">
+            <div class="n">02</div>
+            <div class="t">
+              How can vehicles <b>learn defensive driving</b> under <b>uncertainty</b> and rare,
+              long-tail situations?
+            </div>
+          </div>
+          <div class="q">
+            <div class="n">03</div>
+            <div class="t">
+              How do we <b>evaluate</b> defensive behavior <b>beyond trajectory-centric</b>
+              benchmarks?
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sdiv"></div>
+
+      <!-- Call for Papers -->
+      <section>
+        <div class="kicker">Call for Papers</div>
+        <h2 class="h-sec display">Submit your research</h2>
+        <div class="cfp">
+          <div class="cfp-left">
+            <p class="cfp-intro">
+              We welcome original work across the full safety stack of autonomous driving.
+              Topics of interest include, but are not limited to:
+            </p>
+            <ul class="topics">
+              <li>Latent hazard detection &amp; anticipation</li>
+              <li>Defensive policy learning under uncertainty</li>
+              <li>Long-tail &amp; safety-critical scenario generation</li>
+              <li>Risk-aware prediction &amp; planning</li>
+              <li>Robustness, OOD &amp; distribution shift</li>
+              <li>Closed-loop &amp; simulation-based evaluation</li>
+              <li>Metrics &amp; benchmarks for defensive behavior</li>
+              <li>Multi-agent &amp; V2X interaction safety</li>
+            </ul>
+            <div class="rule"></div>
+            <div class="facts">
+              <div class="fact">
+                <div class="sub-label">Submission</div>
+                <p>
+                  <b>Non-archival</b>, ECCV format, via <b>OpenReview</b>. Short papers
+                  <b>≤ 7 pages</b>, long papers <b>≤ 14 pages</b>. Each paper receives
+                  <b>2–3 expert reviews</b>.
+                </p>
+              </div>
+              <div class="fact">
+                <div class="sub-label">Outcomes</div>
+                <p>
+                  Accepted papers are presented in <b>poster sessions</b>. <b>3 spotlight</b> talks
+                  and <b>2 Best Paper Awards</b> are selected.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rail">
+            <div class="panel">
+              <div class="ph">Key Dates</div>
+              <div class="deadline">
+                <div class="dl-top">
+                  <span class="k">Paper Submission</span>
+                  <span class="tag">Deadline</span>
+                </div>
+                <div class="v">July 15, 2026</div>
+              </div>
+              <div class="drow">
+                <span class="k">Author Notification</span>
+                <span class="v"><del>Aug 8, 2026</del> Aug 3, 2026 (AoE)</span>
+              </div>
+              <div class="drow">
+                <span class="k">Camera Ready</span>
+                <span class="v">Aug 15, 2026</span>
+              </div>
+            </div>
+
+            <div class="submit">
+              <div class="qr"><img src="qr-sdad.png" alt="Scan for sdad.cc" /></div>
+              <div class="stext">
+                <div class="s1">Submit</div>
+                <div class="s2">on OpenReview</div>
+                <div class="s3">Scan the code or visit <b>sdad.cc</b> for the full CFP.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sdiv"></div>
+
+      <!-- Speakers -->
+      <section>
+        <div class="kicker">Invited Speakers</div>
+        <div class="people" style="--ps: 44mm; grid-template-columns: repeat(5, 1fr)">
+          <div class="person">
+            <img src="faces/andreas-geiger.jpg" alt="Andreas Geiger" />
+            <div class="nm">Andreas Geiger</div>
+            <div class="af">Univ. of Tübingen</div>
+          </div>
+          <div class="person">
+            <img src="faces/dragomir-anguelov.jpg" alt="Dragomir Anguelov" />
+            <div class="nm">Dragomir Anguelov</div>
+            <div class="af">Waymo</div>
+          </div>
+          <div class="person">
+            <img src="faces/jun-gao.jpg" alt="Jun Gao" />
+            <div class="nm">Jun Gao</div>
+            <div class="af">Univ. of Michigan</div>
+          </div>
+          <div class="person">
+            <img src="faces/chong-ruan.jpg" alt="Chong Ruan" />
+            <div class="nm">Chong Ruan</div>
+            <div class="af">DeepRoute.Ai</div>
+          </div>
+          <div class="person">
+            <img src="faces/boyi-li.jpg" alt="Boyi Li" />
+            <div class="nm">Boyi Li</div>
+            <div class="af">UC Berkeley · NVIDIA</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sdiv"></div>
+
+      <!-- Organizers -->
+      <section>
+        <div class="kicker">Organizers</div>
+        <div class="people" style="--ps: 38mm">
+          <div class="person">
+            <img src="faces/qifeng-chen.jpg" alt="Qifeng Chen" />
+            <div class="nm">Qifeng Chen</div>
+            <div class="af">HKUST</div>
+          </div>
+          <div class="person">
+            <img src="faces/alexandre-alahi.jpg" alt="Alexandre Alahi" />
+            <div class="nm">Alexandre Alahi</div>
+            <div class="af">EPFL</div>
+          </div>
+          <div class="person">
+            <img src="faces/bo-li.jpg" alt="Bo Li" />
+            <div class="nm">Bo Li</div>
+            <div class="af">UIUC</div>
+          </div>
+          <div class="person">
+            <img src="faces/yiyi-liao.jpg" alt="Yiyi Liao" />
+            <div class="nm">Yiyi Liao</div>
+            <div class="af">Zhejiang Univ.</div>
+          </div>
+          <div class="person">
+            <img src="faces/li-erran-li.jpg" alt="Li Erran Li" />
+            <div class="nm">Li Erran Li</div>
+            <div class="af">AWS AI</div>
+          </div>
+          <div class="person">
+            <img src="faces/tongyi-cao.jpg" alt="Tongyi Cao" />
+            <div class="nm">Tongyi Cao</div>
+            <div class="af">DeepRoute.Ai</div>
+          </div>
+        </div>
+        <div class="students">
+          <b>Student Co-Organizers</b> Zhili Chen (HKUST) · Qiang Wen (DeepRoute.Ai) · Jiaqi Tang (HKUST) · I Chieh Chen (HKUST)
+        </div>
+      </section>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <svg class="fmotif" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#2aa7b3" stroke-width="2.2" fill="none">
+          <circle cx="200" cy="200" r="70" />
+          <circle cx="200" cy="200" r="130" />
+          <circle cx="200" cy="200" r="190" />
+        </g>
+      </svg>
+      <div class="sponsor">
+        <span class="lab">Sponsor</span>
+        <span class="chip2">
+          <img src="../assets/images/sponsors/deeproute-logo.png" alt="DeepRoute" />
+          <span class="zh" lang="zh-CN">元戎启行</span>
+        </span>
+      </div>
+      <div class="fspace"></div>
+      <div class="foot-right">
+        <div class="site">sdad.cc</div>
+        <div class="ct">Contact <a href="mailto:cqf@ust.hk">cqf@ust.hk</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
