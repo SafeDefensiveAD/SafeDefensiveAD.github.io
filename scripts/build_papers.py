@@ -2,7 +2,8 @@
 """Generate papers.html from the OpenReview status CSV and papers/papers_meta.json.
 
 The CSV exported from OpenReview also carries reviewer scores and identities, so it
-stays out of the published site: only title, abstract, forum link and decision are read.
+stays out of the published site: only title, abstract and decision are read. Per-paper
+forum links are deliberately not published either, since the forums expose reviews.
 """
 
 import csv
@@ -106,7 +107,6 @@ def load_rows() -> list[dict]:
         "number": number,
         "title": record["title"].strip(),
         "abstract": record["abstract"],
-        "forum": record["forum"].strip(),
         "is_oral": "oral" in decision.lower(),
         "authors": entry.get("authors") or [],
         "affiliations": entry.get("affiliations") or [],
@@ -144,17 +144,11 @@ def render_card(paper: dict) -> str:
   lines.append("              </div>")
   lines.append("            </details>")
 
-  lines.append('            <div class="paper-actions">')
   if paper["pdf"]:
     href = "./papers/pdf/" + esc(paper["pdf"])
+    lines.append('            <div class="paper-actions">')
     lines.append(f'              <a class="button small primary" href="{href}">PDF</a>')
-  else:
-    lines.append('              <span class="paper-pending">PDF coming soon</span>')
-  lines.append(
-    f'              <a class="button small outline" href="{esc(paper["forum"])}"'
-    ' target="_blank" rel="noopener noreferrer">OpenReview</a>'
-  )
-  lines.append("            </div>")
+    lines.append("            </div>")
   lines.append("          </article>")
   return "\n".join(lines)
 
@@ -248,8 +242,7 @@ def render_page(papers: list[dict]) -> str:
         <p class="paper-intro">
           Every accepted paper is presented as a poster; three papers were additionally selected
           for spotlight talks. Because the workshop is non-archival, authors retain the right to
-          submit their work elsewhere. Camera-ready PDFs are posted here as they are received, and
-          each entry links to its OpenReview forum.
+          submit their work elsewhere. Camera-ready PDFs are posted here as they are received.
         </p>
 
 {sections}

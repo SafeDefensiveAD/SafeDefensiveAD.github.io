@@ -1156,15 +1156,6 @@ ul {
   font-size: 13px;
 }
 
-.paper-pending {
-  padding: 8px 14px;
-  border: 1px dashed rgba(21, 34, 56, 0.22);
-  border-radius: var(--radius-sm);
-  font-size: 13px;
-  font-weight: 600;
-  color: #7f95b7;
-}
-
 /* —— Footer —— */
 footer {
   border-top: 1px solid var(--line);
