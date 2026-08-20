@@ -629,6 +629,17 @@ main {
   line-height: 1.45;
 }
 
+.program-speaker {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.program-speaker::before {
+  content: "·";
+  margin: 0 6px;
+  color: #93a9c8;
+}
+
 /* —— Speakers & organizers —— */
 .speaker h3,
 .organizer-cards .person-meta h3 {

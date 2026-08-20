@@ -118,7 +118,7 @@ def load_rows() -> list[dict]:
 
 
 def render_card(paper: dict) -> str:
-  kind = "Spotlight" if paper["is_oral"] else "Poster"
+  kind = "Oral" if paper["is_oral"] else "Poster"
   badge_class = "oral" if paper["is_oral"] else "poster"
   lines = [
     f'          <article class="paper-card" id="paper-{esc(paper["number"])}">',
@@ -168,8 +168,8 @@ def render_page(papers: list[dict]) -> str:
   sections = "\n\n".join(
     [
       render_section(
-        "Spotlight Talks",
-        "Selected for a 10-minute talk in the morning spotlight session, and also presented as posters.",
+        "Oral Presentations",
+        "Selected for a 15-minute talk in the morning oral session, and also presented as posters.",
         orals,
       ),
       render_section(
@@ -231,7 +231,7 @@ def render_page(papers: list[dict]) -> str:
           </li>
           <li>
             <span class="paper-stat-value">{len(orals)}</span>
-            <span class="paper-stat-label">Spotlight talks</span>
+            <span class="paper-stat-label">Oral presentations</span>
           </li>
           <li>
             <span class="paper-stat-value">{len(posters)}</span>
@@ -241,7 +241,7 @@ def render_page(papers: list[dict]) -> str:
 
         <p class="paper-intro">
           Every accepted paper is presented as a poster; three papers were additionally selected
-          for spotlight talks. Because the workshop is non-archival, authors retain the right to
+          for oral presentations. Because the workshop is non-archival, authors retain the right to
           submit their work elsewhere. Camera-ready PDFs are posted here as they are received.
         </p>
 
