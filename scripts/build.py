@@ -19,9 +19,13 @@ def main() -> None:
 
   shutil.copy2(index, dist / "index.html")
   shutil.copy2(styles, dist / "styles.css")
-  cfp = root / "cfp.html"
-  if cfp.exists():
-    shutil.copy2(cfp, dist / "cfp.html")
+  for page in ("cfp.html", "papers.html"):
+    source = root / page
+    if source.exists():
+      shutil.copy2(source, dist / page)
+  paper_pdfs = root / "papers" / "pdf"
+  if paper_pdfs.exists():
+    shutil.copytree(paper_pdfs, dist / "papers" / "pdf", dirs_exist_ok=True)
   if assets.exists():
     shutil.copytree(assets, dist / "assets", dirs_exist_ok=True)
   nojekyll = root / ".nojekyll"

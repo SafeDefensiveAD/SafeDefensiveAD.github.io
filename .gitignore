@@ -1,0 +1,6 @@
+.DS_Store
+
+# OpenReview exports: these carry reviewer ratings and identities, so they must not be
+# published on the site. Only papers/pdf/ and papers/papers_meta.json are meant to ship.
+papers/*.csv
+papers/*.zip

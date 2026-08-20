@@ -945,6 +945,226 @@ ul {
   margin-top: 0;
 }
 
+/* —— Accepted papers —— */
+.paper-stats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 22px;
+  padding: 0;
+}
+
+.paper-stats li {
+  flex: 1 1 170px;
+  padding: 14px 18px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.paper-stat-value {
+  display: block;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+}
+
+.paper-stat-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5a7399;
+}
+
+.paper-intro {
+  margin: 0 0 36px;
+  max-width: 46rem;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #4a6288;
+}
+
+.paper-section-title {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text-dark);
+}
+
+.paper-list {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 42px;
+}
+
+.paper-card {
+  padding: 20px 22px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  scroll-margin-top: 88px;
+  transition:
+    box-shadow 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+
+.paper-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(100, 150, 220, 0.35);
+}
+
+.paper-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.paper-badge {
+  display: inline-flex;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper-badge.oral {
+  background: linear-gradient(135deg, #2a9fd9, #5a72e8);
+  color: #fff;
+}
+
+.paper-badge.poster {
+  background: rgba(62, 184, 255, 0.13);
+  border: 1px solid rgba(62, 184, 255, 0.32);
+  color: #26608f;
+}
+
+.paper-id {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f95b7;
+}
+
+.paper-title {
+  margin: 0 0 9px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+}
+
+.paper-authors {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #2d4a72;
+}
+
+.paper-affils {
+  margin: 3px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b83a8;
+}
+
+.paper-abstract {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(110, 150, 210, 0.2);
+}
+
+.paper-abstract summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #3a6eb8;
+}
+
+.paper-abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-abstract summary::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(-45deg);
+  transition: transform 0.18s var(--ease);
+}
+
+.paper-abstract[open] summary::before {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.paper-abstract summary:hover {
+  color: #2a5a9a;
+}
+
+.paper-abstract-body {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-body);
+}
+
+.paper-abstract-body p {
+  margin: 0 0 9px;
+}
+
+.paper-abstract-body p:last-child {
+  margin-bottom: 0;
+}
+
+.paper-abstract-body a {
+  color: #3a6eb8;
+  font-weight: 600;
+}
+
+.paper-abstract-body a:hover {
+  color: #2a5a9a;
+}
+
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.button.small {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.paper-pending {
+  padding: 8px 14px;
+  border: 1px dashed rgba(21, 34, 56, 0.22);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: #7f95b7;
+}
+
 /* —— Footer —— */
 footer {
   border-top: 1px solid var(--line);
@@ -1026,6 +1246,14 @@ footer {
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .paper-card {
+    padding: 18px 16px;
+  }
+
+  .paper-stats li {
+    flex-basis: 100%;
   }
 }
 

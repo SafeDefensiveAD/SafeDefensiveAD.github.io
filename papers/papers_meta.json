@@ -1,0 +1,174 @@
+{
+  "_comment": "Author, affiliation and camera-ready PDF metadata for accepted SDAD 2026 papers. Keyed by OpenReview submission number. Titles, abstracts, forum links and decisions come from the OpenReview status CSV; only the fields below are curated by hand. Run scripts/build_papers.py after editing.",
+  "papers": {
+    "3": {
+      "authors": [
+        "Xiaoyu Ye",
+        "Leheng Li",
+        "Xinyu Ji",
+        "Yingjie Cai",
+        "Hongda He",
+        "Xu Yan",
+        "Guanyi Zhao",
+        "Ying-Cong Chen",
+        "Bingbing Liu",
+        "Shuguang Cui",
+        "Zhen Li"
+      ],
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "HKUST (Guangzhou)",
+        "Nanyang Technological University",
+        "Huawei Technologies",
+        "University of New South Wales"
+      ],
+      "pdf": "3_InfiniVerse_Occupancy_Guided.pdf"
+    },
+    "4": {
+      "authors": ["Kangmin Bae", "Hyunwoo Jin", "Sungwon Yi"],
+      "affiliations": ["ETRI, South Korea"],
+      "pdf": "4_Training_Free_Traffic_Sign_D.pdf"
+    },
+    "5": {
+      "authors": [],
+      "affiliations": [],
+      "pdf": null
+    },
+    "6": {
+      "authors": [
+        "Yu Han",
+        "Junjie Zhang",
+        "Xiangyu Wang",
+        "Chuanchuan Zhong",
+        "Yulun Song"
+      ],
+      "affiliations": ["Li Auto Inc."],
+      "pdf": "6_Real_Time_Front_View_Depth_E.pdf"
+    },
+    "7": {
+      "authors": [],
+      "affiliations": [],
+      "pdf": "7_Critical_Scenario_Generation.pdf"
+    },
+    "8": {
+      "authors": ["Yiming Xu", "Hao Cheng", "Monika Sester"],
+      "affiliations": [
+        "Leibniz University Hannover",
+        "University of Twente"
+      ],
+      "pdf": "8_PLFlow_Prior_Conditioned_Lat.pdf"
+    },
+    "9": {
+      "authors": ["Hejiu Lu", "Sang Hun Lee"],
+      "affiliations": ["Kookmin University"],
+      "pdf": "9_Seeing_the_Evidence_Not_Just.pdf"
+    },
+    "10": {
+      "authors": ["Fabian Hüger"],
+      "affiliations": ["CARIAD SE"],
+      "pdf": "10_Do_Not_Forget_the_Obvious_R.pdf"
+    },
+    "11": {
+      "authors": ["Yunwei Li", "Ruilin Yu", "Xiangyang Ye", "Siyu Wu"],
+      "affiliations": ["Tsinghua University"],
+      "pdf": "11_Beyond_Collision_A_Human_Ce.pdf"
+    },
+    "12": {
+      "authors": [
+        "Rajeev Yasarla",
+        "Shizhong Han",
+        "Hsin-Pai Cheng",
+        "Apratim Bhattacharyya",
+        "Shweta Mahajan",
+        "Hong Cai",
+        "Fatih Porikli"
+      ],
+      "affiliations": ["Qualcomm AI Research"],
+      "pdf": "12_RoCA_Robust_Cross_Domain_En.pdf"
+    },
+    "13": {
+      "authors": [
+        "Masaki Nambata",
+        "Shota Yamazaki",
+        "Jo Nishiyama",
+        "Takuya Nanri"
+      ],
+      "affiliations": ["Nissan Motor Co., Ltd."],
+      "pdf": "13_Decision_Guided_Adaptive_Da.pdf"
+    },
+    "14": {
+      "authors": [],
+      "affiliations": [],
+      "pdf": null
+    },
+    "16": {
+      "authors": [
+        "Abdullah Al Maruf",
+        "Md. Sajedul Islam",
+        "Tanmoy Mridha",
+        "Irfan Hossain Bhuiyan"
+      ],
+      "affiliations": [
+        "Rajshahi University of Engineering & Technology (RUET)"
+      ],
+      "pdf": "16_BD_HazardVLM_Probing_Vision.pdf"
+    },
+    "17": {
+      "authors": [
+        "Je-Seok Ham",
+        "Hyunseo Lee",
+        "Yongseon Lee",
+        "Kwanyong Park",
+        "Jinyoung Moon",
+        "Changick Kim"
+      ],
+      "affiliations": [
+        "ETRI",
+        "KAIST",
+        "Kyungpook National University",
+        "Seoul National University of Science and Technology",
+        "University of Seoul"
+      ],
+      "pdf": "17_Infrastructure_Assisted_Def.pdf"
+    },
+    "18": {
+      "authors": ["Ruichen Tan", "Zengxiang Lei", "Satish Ukkusuri"],
+      "affiliations": ["Purdue University"],
+      "pdf": "18_Worst_Case_Hidden_Vehicle_T.pdf"
+    },
+    "19": {
+      "authors": [
+        "Arthur Jakobsson",
+        "Yu-Rou Tuan",
+        "Leron Julian",
+        "Shawn Hunt",
+        "Kenta Suzuki",
+        "Shinya Tanaka",
+        "Mahdi Bandegi",
+        "Jay Gloomis",
+        "Hironobu Fujiyoshi",
+        "Kris Kitani",
+        "Jeffrey Ichnowski"
+      ],
+      "affiliations": [
+        "DENSO International America, Pittsburgh Innovation Lab",
+        "Carnegie Mellon University",
+        "DENSO Corporation"
+      ],
+      "pdf": "19_RareOcc_Controllable_4D_Occ.pdf"
+    },
+    "20": {
+      "authors": [],
+      "affiliations": [],
+      "pdf": null
+    },
+    "21": {
+      "authors": ["Gunita Singh Khurana", "Avnish Panwar", "Indrajit Ghosh"],
+      "affiliations": [
+        "Thapar Institute of Engineering and Technology",
+        "Indian Institute of Technology Roorkee"
+      ],
+      "pdf": "21_When_a_Closed_Vocabulary_De.pdf"
+    }
+  }
+}

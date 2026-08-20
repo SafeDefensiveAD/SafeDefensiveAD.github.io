@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accepted Papers · SDAD @ ECCV 2026</title>
+    <meta
+      name="description"
+      content="Accepted papers at the Safe and Defensive Autonomous Driving (SDAD) workshop at ECCV 2026, with abstracts and camera-ready PDFs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="./index.html#top">SDAD 2026 @ ECCV</a>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="./index.html#about">About</a></li>
+            <li><a href="./index.html#program">Program</a></li>
+            <li><a href="./index.html#speakers">Speakers</a></li>
+            <li><a href="./cfp.html">Call for Papers</a></li>
+            <li><a href="./papers.html" aria-current="page">Papers</a></li>
+            <li><a href="./index.html#sponsors">Sponsors</a></li>
+            <li><a href="./index.html#organizers">Organizers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section section-light page-main">
+      <div class="container">
+        <h1 class="page-title">Accepted Papers</h1>
+        <p class="section-note page-lead">
+          Safe and Defensive Autonomous Driving (SDAD) · ECCV&nbsp;2026 · Malmö, Sweden ·
+          Non-archival workshop track
+        </p>
+
+        <ul class="paper-stats">
+          <li>
+            <span class="paper-stat-value">18</span>
+            <span class="paper-stat-label">Accepted papers</span>
+          </li>
+          <li>
+            <span class="paper-stat-value">3</span>
+            <span class="paper-stat-label">Spotlight talks</span>
+          </li>
+          <li>
+            <span class="paper-stat-value">15</span>
+            <span class="paper-stat-label">Poster presentations</span>
+          </li>
+        </ul>
+
+        <p class="paper-intro">
+          Every accepted paper is presented as a poster; three papers were additionally selected
+          for spotlight talks. Because the workshop is non-archival, authors retain the right to
+          submit their work elsewhere. Camera-ready PDFs are posted here as they are received, and
+          each entry links to its OpenReview forum.
+        </p>
+
+        <h2 class="paper-section-title">Spotlight Talks</h2>
+        <p class="section-note">Selected for a 10-minute talk in the morning spotlight session, and also presented as posters.</p>
+        <div class="paper-list">
+          <article class="paper-card" id="paper-9">
+            <div class="paper-top">
+              <span class="paper-badge oral">Spotlight</span>
+              <span class="paper-id">Submission #9</span>
+            </div>
+            <h3 class="paper-title">Seeing the Evidence, Not Just the Answer: Training-Free SalMask Evidence Routing for Traffic Accident Video Understanding</h3>
+            <p class="paper-authors">Hejiu Lu, Sang Hun Lee</p>
+            <p class="paper-affils">Kookmin University</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Vision-language models (VLMs) show strong potential for autonomous-driving scene understanding, yet their decisions on safety-critical accident videos may rely on language priors rather than visually grounded evidence. We propose SalMask Evidence Routing (SalMask-ER), a training-free framework that routes complementary global and localized evidence to a frozen VLM. A compact question-agnostic caption preserves scene-level context, while open-vocabulary detection and driver-oriented saliency produce object-aware crops with attenuated backgrounds. On VRU-Accident, SalMask-ER improves Qwen2.5-VL-3B from 51.12% to 67.33%, a 16.21-point gain, and reaches 71.30% with Qwen3.5-4B. In the same way intended for the dense accident captioning task, the SalMask configuration reports higher scores than the published Qwen2.5-VL-3B baseline on all six metrics and outperforms VideoPerceiver-3B, which is trained using a combination of supervised fine-tuning (SFT) and reinforcement learning (RL). Evidence ablations further show that removing or mismatching localized content weakens accident-centric and causal reasoning.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/9_Seeing_the_Evidence_Not_Just.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=43bXAZxmjZ" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-12">
+            <div class="paper-top">
+              <span class="paper-badge oral">Spotlight</span>
+              <span class="paper-id">Submission #12</span>
+            </div>
+            <h3 class="paper-title">RoCA: Robust Cross-Domain End-to-End Autonomous Driving</h3>
+            <p class="paper-authors">Rajeev Yasarla, Shizhong Han, Hsin-Pai Cheng, Apratim Bhattacharyya, Shweta Mahajan, Hong Cai, Fatih Porikli</p>
+            <p class="paper-affils">Qualcomm AI Research</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>End-to-end (E2E) autonomous driving has recently emerged as a new paradigm, offering significant potential. However, few studies have looked into the practical challenge of deployment across domains (e.g., cities). Although several works have incorporated Large Language Models (LLMs) to leverage their open-world knowledge, LLMs do not guarantee cross-domain driving performance and may incur prohibitive retraining costs during domain adaptation. In this paper, we propose RoCA, a novel framework for robust cross-domain E2E autonomous driving. RoCA formulates the joint probabilistic distribution over the tokens that encode ego and surrounding vehicle information in the E2E pipeline. Instantiating with a Gaussian process (GP), RoCA learns a set of basis tokens with corresponding trajectories, which span diverse driving scenarios. Then, given any driving scene, it is able to probabilistically infer the future trajectory. By using RoCA together with a base E2E model in source-domain training, we improve the generalizability of the base model, without requiring extra inference computation. In addition, RoCA enables robust adaptation on new target domains, significantly outperforming direct finetuning. We extensively evaluate RoCA on various cross-domain scenarios and show that it achieves strong domain generalization and adaptation performance.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/12_RoCA_Robust_Cross_Domain_En.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=6yBIRk33hJ" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-18">
+            <div class="paper-top">
+              <span class="paper-badge oral">Spotlight</span>
+              <span class="paper-id">Submission #18</span>
+            </div>
+            <h3 class="paper-title">Worst-Case Hidden-Vehicle Trajectory Search in Spatiotemporal Occlusion Regions</h3>
+            <p class="paper-authors">Ruichen Tan, Zengxiang Lei, Satish Ukkusuri</p>
+            <p class="paper-affils">Purdue University</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Occlusion introduces fundamental uncertainty and safety risks in autonomous driving. Existing methods often propagate frame-wise hypotheses or optimize ego behavior against prescribed hidden-agent predictions, leaving the worst history-consistent interaction unexplored. We introduce History-Conditioned Minimax Trajectory Search (HC-MTS), which couples temporal occlusion reasoning with response-aware adversarial search. First, HC-MTS constructs finite hidden-state modes, each certified by a backward witness satisfying multi-frame visibility, observed-occupancy, semantic-map, and class-specific kinematic constraints. It then solves a bilevel minimax problem: an inner finite oracle maximizes the ego driving score over destination attainment and ride comfort, while the outer search selects the legal hidden-vehicle trajectory that minimizes this best-response value. Across eight Waymo Open Motion Dataset scenarios, increasing the visibility-memory horizon from K=1 to K=20 reduces the mean per-scenario vehicle, pedestrian, and total retained hidden-seed counts by 18.12%, 21.67%, and 18.45%, respectively. HC-MTS identifies six avoidable counterexamples, while no legal collision-producing attacker is found in the remaining two scenes within the finite search budget.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/18_Worst_Case_Hidden_Vehicle_T.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=Kf0ymJb8Bf" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+        </div>
+
+        <h2 class="paper-section-title">Poster Presentations</h2>
+        <p class="section-note">Presented in poster sessions 1 and 2.</p>
+        <div class="paper-list">
+          <article class="paper-card" id="paper-3">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #3</span>
+            </div>
+            <h3 class="paper-title">InfiniVerse: Occupancy Guided Unbounded Scene Generation for Autonomous Driving</h3>
+            <p class="paper-authors">Xiaoyu Ye, Leheng Li, Xinyu Ji, Yingjie Cai, Hongda He, Xu Yan, Guanyi Zhao, Ying-Cong Chen, Bingbing Liu, Shuguang Cui, Zhen Li</p>
+            <p class="paper-affils">The Chinese University of Hong Kong, Shenzhen · HKUST (Guangzhou) · Nanyang Technological University · Huawei Technologies · University of New South Wales</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Generating realistic, controllable, and temporally coherent urban environments is a critical yet unresolved challenge in the autonomous driving community.</p>
+                <p>In this paper, we introduce InfiniVerse, a unified pipeline for long-range, 2D–3D-aligned, and controllable synthesis of dynamic urban scenes from a single frame.</p>
+                <p>In practice, our approach first reconstructs a 3D occupancy representation from the input multi-view frame. This representation serves as a foundation for autoregressive scene extension along arbitrary trajectories.</p>
+                <p>Subsequently, a video diffusion model translates the coarse occupancy grid into realistic, spatiotemporally consistent video sequences.</p>
+                <p>Moreover, we propose a hierarchical sketch-and-refine paradigm, in which the generated videos are re-projected as image-conditioned feedback to enhance the 3D occupancy representation, establishing cross-modal alignment and mutual enhancement between the visual and spatial domains.</p>
+                <p>Extensive evaluations on the Waymo Open Dataset and nuScenes demonstrate that InfiniVerse achieves state-of-the-art performance, with a FID of 6.4 and FVD of 67.97, significantly outperforming existing benchmarks in both duration and stability.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/3_InfiniVerse_Occupancy_Guided.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=JAJRRcZ5NO" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-4">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #4</span>
+            </div>
+            <h3 class="paper-title">Training-Free Traffic-Sign Detection Recovery via Open-Vocabulary Adversarial-Patch Localization</h3>
+            <p class="paper-authors">Kangmin Bae, Hyunwoo Jin, Sungwon Yi</p>
+            <p class="paper-affils">ETRI, South Korea</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Removing an adversarial patch is not equivalent to recovering the evidence required by an object detector. In traffic-sign images, a patch can occlude the class-defining symbol; a perceptually plausible completion may therefore depict the wrong sign, while unconstrained recovery may overwrite predictions that survived the attack. We study this distinction on REAP and propose a training-free recovery framework for settings in which detector retraining is unavailable. A frozen open-vocabulary detector hierarchically localizes candidate signs and patch regions without access to patch size, count, or placement. The resulting boxes define masks for native-resolution local inpainting. Detections from the recovered image and contextual crops are fused asymmetrically with an immutable attacked-image output, while a frozen visual-encoder ensemble supplies ranked class hypotheses from clean references. No detector, localizer, or encoder parameter is updated. This formulation separates open-vocabulary patch localization from privileged benchmark geometry and treats perceptual completion, semantic recovery, and detection preservation as distinct problems.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/4_Training_Free_Traffic_Sign_D.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=yZ1Z9urV3N" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-5">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #5</span>
+            </div>
+            <h3 class="paper-title">When Shared Rollouts Fail in Defensive Driving Evaluation: A NAVSIM Score Basis Audit</h3>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Defensive driving scores are useful only when they preserve distinctions between policies that observe surrounding actors and those that do not. Re-simulation benchmarks may use reference-conditioned forgiveness, under which an agent receives credit when the logged human reference fails a compliance channel. When agent and reference share an unstable rollout transformation, this rule can propagate shared reference failures into broad compliance credit. We audit this risk in NAVSIM v2.2 original scene single-stage scoring. Under the affected documented-stack condition on the audited numerical backend, the route-blind Ignore-All probe and a route-aware actor-blind probe outrank human replay and PDM-Closed over the complete 12,146-token navtest split. A fresh installation following the public specification reproduces rollout divergence on a fixed 32-token diagnostic set. A same-source dependency stack control and an exact-input diagnostic isolate dependency-sensitive numerical behavior in the shared velocity refit. On a 450-token control pool, replacing only the solver eliminates rollout divergence and restores blind-last ordering while keeping forgiveness enabled. Thus, the numerical instability is the direct trigger. Reference-conditioned forgiveness propagates the resulting shared reference failures into compliance credit. We contribute an audit protocol requiring score basis and stack disclosure, blind probes, overwrite reporting, and rollout stability tests before using such scores for defensive driving claims.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <span class="paper-pending">PDF coming soon</span>
+              <a class="button small outline" href="https://openreview.net/forum?id=FZY75J5NkB" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-6">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #6</span>
+            </div>
+            <h3 class="paper-title">Real-Time Front-View Depth Estimation for Automatic Emergency Braking</h3>
+            <p class="paper-authors">Yu Han, Junjie Zhang, Xiangyu Wang, Chuanchuan Zhong, Yulun Song</p>
+            <p class="paper-affils">Li Auto Inc.</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Automatic emergency braking (AEB) requires front-obstacle perception that is both accurate and low-latency. Existing systems typically rely on lidar-based perception, camera-based object detection, or image-view depth estimation. Lidar pipelines can be vulnerable to spurious returns caused by reflective surfaces or exhaust smoke, while object detectors depend on predefined categories and may miss unknown or irregular obstacles. Image-view depth estimation predicts dense per-pixel depth, but its outputs are not directly aligned with AEB and usually require projection and additional post-processing. We propose an end-to-end model that directly predicts a front-view depth map on a forward plane in the ego-vehicle coordinate frame. An attention-based encoder aggregates multi-scale image features onto a fixed front-view query grid, and a lightweight decoder outputs a compact front-view depth map. Training targets are generated automatically by projecting temporally aligned lidar point clouds onto the front-view plane, requiring no manual annotation. In deployment, the model runs at 1.7 ms on ThorU and reduces lidar-noise-induced false AEB triggers by about 40% without degrading true-positive AEB triggering.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/6_Real_Time_Front_View_Depth_E.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=1YNw5sFFMw" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-7">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #7</span>
+            </div>
+            <h3 class="paper-title">Critical Scenario Generation for Signalized Intersections via Liouville Guided Temporal Reparameterization</h3>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Autonomous driving evaluation at signalized intersections is particularly demanding because road users interact under dense traffic, signal control, and right of way constraints. Since hazardous interactions occur infrequently in naturalistic data, existing datasets provide limited support for constructing realistic critical scenario libraries. We therefore formulate critical scenario generation as the controlled evolution of recorded interactions in a compact conflict state space. The state jointly captures the arrival time gap at the conflict point and the minimum spatial clearance, while a phase conditioned potential integrates empirical statistics, shrinkage estimation, and a structural risk prior. The normalized potential gradient defines the characteristic direction of increasing criticality, and the Liouville continuity equation describes the corresponding evolution at the population level. Individual variants are then realized through temporal reparameterization along the recorded paths. Results on the SinD dataset demonstrate controllable progression toward more critical surrogate states without altering the original path geometry.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/7_Critical_Scenario_Generation.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=15VIxwtXtc" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-8">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #8</span>
+            </div>
+            <h3 class="paper-title">PLFlow: Prior-Conditioned Latent Flow Matching for Map-Compliant Forecasting</h3>
+            <p class="paper-authors">Yiming Xu, Hao Cheng, Monika Sester</p>
+            <p class="paper-affils">Leibniz University Hannover · University of Twente</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Trajectory forecasting requires a compact set of diverse futures that remain compliant with observable road geometry. Flow matching provides powerful conditional generation with simulation-free training, but is challenging to apply directly to trajectory forecasting. Three practical issues arise: (i) forecasting naturally starts from a history-conditioned distribution rather than a standard Gaussian, (ii) multi-step generation has high latency and discretized ODE sampling is brittle under intermediate-state drift, and (iii) unordered samples do not directly provide a compact, ordered set of probabilistic modes. We propose PLFlow (Prior-Conditioned Latent Flow Matching), which formulates forecasting as history→future conditional transport in a shared trajectory-VAE latent space with a history-induced Gaussian prior and training-time Gaussian augmentation for robust integration. To enable real-time inference, we pool and re-cluster teacher rollouts into K representative latent centers and distill them into a one-step student through permutation-invariant matching. The resulting student outputs an ordered set of probabilistic trajectories while the stochastic flow process remains in the teacher. Experiments on Argoverse 1 and 2 demonstrate competitive forecasting accuracy and improved road-geometry compliance. Controlled comparisons indicate that repeated state-dependent transport contributes to lower map-violation rates, whereas repeated endpoint prediction does not.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/8_PLFlow_Prior_Conditioned_Lat.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=OO4U42hnzb" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-10">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #10</span>
+            </div>
+            <h3 class="paper-title">Do Not Forget the Obvious - RISC: A Risk-Informed Slice-Coverage Protocol for Safe Autonomous Driving</h3>
+            <p class="paper-authors">Fabian Hüger</p>
+            <p class="paper-affils">CARIAD SE</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Aggregate metrics may not fully reflect performance in insufficiently examined high-risk driving conditions. We propose RISC (Risk-Informed Slice Coverage), a practical protocol for risk-guided stress testing and coverage-qualified evaluation. Risk-guided stress testing directs a finite audit budget toward risk-relevant sub-datasets, called risk slices, while coverage-qualified evaluation reports results together with explicit statements about which slices are sufficiently or insufficiently covered. The protocol translates safety concerns into machine-readable risk slices, uses lightweight signals to tag candidate data, selects a compact audit set by risk, and qualifies the results using coverage evidence. An LLM can optionally support this process by surfacing relevant but potentially overlooked conditions during test planning, thereby helping engineers not to forget the obvious. RISC is model-agnostic and can be applied to perception modules, driving models, and other autonomous-driving subsystems. We instantiate the protocol for monocular pedestrian perception using 1,000 frames from the Zenseact Open Dataset, image statistics, and a YOLO-based detector proxy. In this proof-of-concept study, risk-guided selection increases critical failure discovery from 34.0% under random sampling to 98.5%. RISC provides a lightweight, assurance-oriented evaluation layer that complements scenario categorization, coverage assessment, and broader testing-and-verification workflows.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/10_Do_Not_Forget_the_Obvious_R.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=RnGTNCTCoN" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-11">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #11</span>
+            </div>
+            <h3 class="paper-title">Beyond Collision: A Human-Centric Process Safety Evaluation and Trajectory Supervision Framework for Autonomous Driving</h3>
+            <p class="paper-authors">Yunwei Li, Ruilin Yu, Xiangyang Ye, Siyu Wu</p>
+            <p class="paper-affils">Tsinghua University</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Safety of the intended functionality (SOTIF) evaluations for autonomous driving systems often reduce acceptance to outcome-level evidence, such as whether a scenario is collision-free or whether a simple criticality threshold is crossed. We argue that this misses a central safety question: did the system complete the human-relevant driving process safely before the final outcome? This paper proposes a human-centric multi-stage evaluation framework for intersection driving. The framework decomposes a scenario into approach, in-intersection, and exit stages, and evaluates each stage through safe-driving-procedure completion, collision risk, behavioral feasibility, and efficiency. In a CARLA--Autoware software-in-the-loop case study, the framework exposes hidden process risk in a collision-free case, and diagnoses failure modes across 15 safety-critical scenarios where Autoware passes only 53.3% of cases. We further show that human-process signals can serve as a trajectory safety guardrail for end-to-end planning: on 504 OpenDriveVLA intersection samples, a human-process selector reduces collision steps from 19 to 12.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/11_Beyond_Collision_A_Human_Ce.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=DEHU9Swd5f" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-13">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #13</span>
+            </div>
+            <h3 class="paper-title">Decision-Guided Adaptive Data Sampling for Autonomous Driving Model Training</h3>
+            <p class="paper-authors">Masaki Nambata, Shota Yamazaki, Jo Nishiyama, Takuya Nanri</p>
+            <p class="paper-affils">Nissan Motor Co., Ltd.</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Large-scale driving datasets are widely used to expose autonomous driving models to diverse scenes. However, real-world datasets often contains redundant scenes, creating biased distributions in which safety-critical scenarios are highly rare. This limits models’ exposure to safety-relevant scenarios and degrades their performance on safety-critical scenarios. Moreover, the optimal balance between the long tail and common driving scenes cannot be determined in advance because it depends on the definition of rarity, training stability, and model characteristics. To address this problem, we propose a training framework that dynamically optimizes model experience through ontology-based data sampling. The ontology represents driving decisions and their causal factors, allowing scenes to be evaluated not only by model performance but also by driving-relevant events. Using this representation, the framework updates the training dataset according to the learning status of the models. Our experiments show that our method improves the data-efficiency of training and performance in rare driving scenarios.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/13_Decision_Guided_Adaptive_Da.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=AZvYQfunXQ" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-14">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #14</span>
+            </div>
+            <h3 class="paper-title">SF-V: Auditing Soft Headway-Floor Regularization at the VLM-to-MPC Interface</h3>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>VLM-generated parameters can directly alter downstream MPC behavior. We audit desired headway below a controller-side 2 s reference as a configuration-specific interface event, not a universal safety violation. We refer to this fixed-target soft-floor intervention as SF-V (Safety-Floor VLM-MPC). SF-V adds a fixed soft headway-floor term to a reduced longitudinal MPC scaffold; eliminating its unbounded slack gives an exact squared-hinge penalty with no feasible-set change or hard guarantee. Of 303 logged outputs, 66 are sub-floor and headway has weak rank association with logged gap and closing-time proxies. Controlled cost-only, clamp, matched-target, and SF-V comparisons separate clipping, penalty strength, and target choice. SF-V reduces mean post-initial worst deficit by 0.126/0.617/0.470 m in clean/lead/TTC settings. Exact average-speed conditioning retains 0.033/0.166/0.150 m, but independent margin gains are small and extreme-tail and collision outcomes do not improve. A 4 s braking diagnostic increases mean minimum gap by 0.668 m without lag and 0.579 m with 0.5 s lag, again without collision-count change. This is a bounded interface audit, not deployment-level safety validation.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <span class="paper-pending">PDF coming soon</span>
+              <a class="button small outline" href="https://openreview.net/forum?id=eafB0DBnB2" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-16">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #16</span>
+            </div>
+            <h3 class="paper-title">BD-HazardVLM: Probing Vision-Language Models for Latent Defensive-Driving Hazards in Bangladesh Road Scenes</h3>
+            <p class="paper-authors">Abdullah Al Maruf, Md. Sajedul Islam, Tanmoy Mridha, Irfan Hossain Bhuiyan</p>
+            <p class="paper-affils">Rajshahi University of Engineering &amp; Technology (RUET)</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Vision-language models are increasingly used for driving-scene understanding, yet their defensive reasoning under weakly structured Global South traffic remains unclear. We introduce BD-HazardVLM, a diagnostic benchmark of 500 Bangladesh road-scene images—375 from RSUD20K and 125 from TFP-BD—annotated for hazard presence, primary hazard category, risk timing, severity, defensive actions, visible evidence, and hallucination- and Western-road-bias traps. We evaluate Qwen2.5-VL-7B, InternVL3-8B, and MiniCPM-V-4.6 using a shared zero-shot task definition and structured output schema. Binary hazard-presence accuracy ranges from 88.0% to 89.2%, essentially matching the 89.0% majority-class baseline. Fine-grained reasoning is substantially weaker: category accuracy remains below 40%, risk-timing accuracy ranges from 1.6% to 12.4%, and exact defensive-action matching remains below 2%. Although InternVL3-8B achieves the highest severity accuracy at 61.2%, it has zero recall on the 58 high-severity cases. Qwen exhibits severe category mode collapse, while all models show weak latent-hazard anticipation and near-zero self-reported trap recognition. For the evaluated models, these findings show that coarse hazard recognition does not imply reliable fine-grained defensive-driving reasoning and motivate geographically diverse safety evaluation.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/16_BD_HazardVLM_Probing_Vision.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=tBwsk52RwP" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-17">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #17</span>
+            </div>
+            <h3 class="paper-title">Infrastructure-Assisted Defensive Forecasting of Latent Traffic Hazards from Uncalibrated CCTV</h3>
+            <p class="paper-authors">Je-Seok Ham, Hyunseo Lee, Yongseon Lee, Kwanyong Park, Jinyoung Moon, Changick Kim</p>
+            <p class="paper-affils">ETRI · KAIST · Kyungpook National University · Seoul National University of Science and Technology · University of Seoul</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Safe autonomous driving requires anticipating potentially hazardous vehicle motions beyond the limited field of view of ego-centric sensors. Existing urban CCTV cameras provide a complementary infrastructure-side perspective, but their use for motion forecasting is hindered by unknown camera parameters, perspective distortion, and noisy vehicle tracks. To address these challenges, we present NAD-Traj, an infrastructure-assisted trajectory forecasting framework designed for uncalibrated urban CCTV. We introduce a calibration-free vehicle trajectory extraction pipeline and a robust graph-based prediction model equipped with a GRU-based temporal refinement module and a noise-aware loss function. Using this pipeline, we construct NAD-Traj-DB, containing 7,364 traffic scenes, over 528K vehicle-track instances, and 21.4M trajectory points from urban intersections. Experimental results on NAD-Traj-DB and the public V2X-Seq benchmark demonstrate that our approach reduces the Miss Rate (MR) by 23.6% relative to the strongest evaluated baseline. These results highlight the potential of uncalibrated urban CCTV to serve as a promising infrastructure-side perception and forecasting framework for future defensive-driving systems.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/17_Infrastructure_Assisted_Def.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=i5vI4UiAKK" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-19">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #19</span>
+            </div>
+            <h3 class="paper-title">RareOcc: Controllable 4D Occupancy and LiDAR Generation for Long-Tail Driving Scenes</h3>
+            <p class="paper-authors">Arthur Jakobsson, Yu-Rou Tuan, Leron Julian, Shawn Hunt, Kenta Suzuki, Shinya Tanaka, Mahdi Bandegi, Jay Gloomis, Hironobu Fujiyoshi, Kris Kitani, Jeffrey Ichnowski</p>
+            <p class="paper-affils">DENSO International America, Pittsburgh Innovation Lab · Carnegie Mellon University · DENSO Corporation</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Autonomous vehicle behavior in emergency and rare situations is a well documented challenge, with some of the most concerning instances being ambulance obstruction. Yet the sensor data needed to study these long-tail events at scale is exactly what their rarity makes scarce. We propose RareOcc (ROCC), a system that generates realistic 4D occupancy and LiDAR for customizable long-tail situations and documented vehicular crashes; to our knowledge RareOcc is the first pipeline to jointly support crash-grounded 4D generation, editable BEV authoring, occupancy generation, and LiDAR generation. ROCC uses a bird’s-eye-view (BEV) layout as a shared intermediary that three interchangeable methods write to (CIREN-based crash recreation, LLM-based behavior specification, and CompoSIA-based real-scene editing) and lifts it to occupancy with an entity-grounded generator that places each agent from its specified box and replaces the diffusion stage of prior occupancy-centric pipelines. Evaluated on the nuPlan-Occ mini validation dataset, our model outperforms the state-of-the-art UniScene-v2 generator by 22.6 points in occupancy mIoU, and materializes requested scene edits across all seven foreground classes, rare categories included. Generated examples from all three creation routes are browsable at <a href="https://rareocc-anon.github.io/" target="_blank" rel="noopener noreferrer">https://rareocc-anon.github.io/</a>.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/19_RareOcc_Controllable_4D_Occ.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=LUo5ZdqHAI" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-20">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #20</span>
+            </div>
+            <h3 class="paper-title">SCoRe: Bayesian Scene Context Recovery with Graph-Conditioned Diffusion for Trajectory Forecasting under Partial Observability</h3>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>Trajectory forecasting for autonomous driving commonly assumes complete historical trajectories and reliable HD-map information, assumptions that are often violated by sensor occlusions, detection failures, and localization errors. Existing methods typically address trajectory incompleteness or map uncertainty independently, limiting their robustness under partial observability. To address this limitation, we propose SCoRe (Scene Context Recovery), a unified framework that formulates trajectory forecasting as a hierarchical bayesian inference problem over scene graphs and historical trajectories. Specifically, SCoRe models the observed HD map as a stochastic degradation of the underlying scene graph and employs a trajectory-conditioned graph score network, trained via denoising score matching, to recover corrupted map representations through adaptive neural langevin refinement. The refined map representation then conditions a graph-guided diffusion model to reconstruct incomplete historical trajectories by jointly exploiting temporal motion cues and scene topology. Instead of using a separately trained history encoder, we extract a confidence-aware diffusion motion embedding directly from the denoiser representation. These motion embeddings and refined map features are then fused by a scene transformer for multi-modal trajectory prediction. Experiments on the Argoverse 1 and Argoverse 2 benchmarks under diverse history and HD-map corruption settings demonstrate that SCoRe consistently outperforms state-of-the-art methods.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <span class="paper-pending">PDF coming soon</span>
+              <a class="button small outline" href="https://openreview.net/forum?id=fMGsYpguuE" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+          <article class="paper-card" id="paper-21">
+            <div class="paper-top">
+              <span class="paper-badge poster">Poster</span>
+              <span class="paper-id">Submission #21</span>
+            </div>
+            <h3 class="paper-title">When a Closed-Vocabulary Detector Responds with “Car”: Diagnosing Autorickshaw–Car Overlap under Cityscapes-to-IDD Adaptation</h3>
+            <p class="paper-authors">Gunita Singh Khurana, Avnish Panwar, Indrajit Ghosh</p>
+            <p class="paper-affils">Thapar Institute of Engineering and Technology · Indian Institute of Technology Roorkee</p>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <div class="paper-abstract-body">
+                <p>A road detector with a closed vocabulary cannot explicitly name an object outside its source label space. We study how such detectors handle one safety-relevant target-private category under Cityscapes-to-IDD transfer: does an autorickshaw GT receive no qualifying known-class prediction, or does its region overlap a source-known prediction such as car? We use complementary GT-anchored and fixed-region diagnostics on an image-disjoint, autorickshaw-focused 1000-image IDD subset containing 2196 autorickshaw GT boxes. Across source-only Faster R-CNN, Standard DA-Faster R-CNN, and two RoI-gated stress-test runs, diagnosis-subset known-class AP, response coverage, misses, and absolute as-car counts produce different point-estimate rankings. The conditional class-overlap pattern is nevertheless stable: 97.08–98.00% of autorickshaw GTs with any qualifying known-class match also have a car match. Standard DA has fewer as-car matches than source-only (932 versus 977) but more misses (1236 versus 1191), whereas RoI-gated DA has the highest diagnosis-subset AP (15.32), fewer misses, and the largest as-car count (1028). A separately trained supervised autorickshaw localization probe provides a common-region check on frozen student outputs. The main insight is therefore coverage-confounded car overlap: absolute target-private overlap counts must be interpreted jointly with detector response and silence, not as evidence that one adaptation method is universally better.</p>
+              </div>
+            </details>
+            <div class="paper-actions">
+              <a class="button small primary" href="./papers/pdf/21_When_a_Closed_Vocabulary_De.pdf">PDF</a>
+              <a class="button small outline" href="https://openreview.net/forum?id=NLVlvpnqTG" target="_blank" rel="noopener noreferrer">OpenReview</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="page-back">
+          <a href="./index.html">&larr; Back to workshop home</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-wrap">
+        <p>Safe and Defensive Autonomous Driving (SDAD) · ECCV 2026</p>
+        <p>Contact: <a href="mailto:cqf@ust.hk">cqf@ust.hk</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
