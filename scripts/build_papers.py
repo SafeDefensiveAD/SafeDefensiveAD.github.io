@@ -165,11 +165,12 @@ def render_section(title: str, note: str, papers: list[dict]) -> str:
 def render_page(papers: list[dict]) -> str:
   orals = [paper for paper in papers if paper["is_oral"]]
   posters = [paper for paper in papers if not paper["is_oral"]]
+  oral_word = {1: "one", 2: "two", 3: "three", 4: "four"}.get(len(orals), str(len(orals)))
   sections = "\n\n".join(
     [
       render_section(
         "Oral Presentations",
-        "Selected for a 15-minute talk in the morning oral session, and also presented as posters.",
+        "Selected for a talk in the morning (10:30–11:00) or afternoon (14:30–15:30) oral session, and also presented as posters.",
         orals,
       ),
       render_section(
@@ -240,7 +241,7 @@ def render_page(papers: list[dict]) -> str:
         </ul>
 
         <p class="paper-intro">
-          Every accepted paper is presented as a poster; three papers were additionally selected
+          Every accepted paper is presented as a poster; {oral_word} papers were additionally selected
           for oral presentations. Because the workshop is non-archival, authors retain the right to
           submit their work elsewhere. Camera-ready PDFs are posted here as they are received.
         </p>

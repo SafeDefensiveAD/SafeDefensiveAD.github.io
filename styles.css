@@ -640,6 +640,24 @@ main {
   color: #93a9c8;
 }
 
+.program-orals {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #4a6488;
+}
+
+.person-photo-placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #1a2d4f, #2a4570);
+  color: #8ed4ff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
 /* —— Speakers & organizers —— */
 .speaker h3,
 .organizer-cards .person-meta h3 {
