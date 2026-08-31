@@ -20,7 +20,6 @@ SIZE = 600           # output resolution (square)
 
 # name, source path (relative to repo root), head box (x0, y0, x1, y1)
 PEOPLE = [
-    ("andreas-geiger",    "assets/images/people/andreas-geiger.jpg",   (0.27, 0.07, 0.66, 0.46)),
     ("marco-pavone",      "assets/images/people/marco-pavone.jpg",     (0.18, 0.04, 0.76, 0.82)),
     ("dragomir-anguelov", "assets/images/people/dragomir-anguelov.gif",(0.30, 0.23, 0.68, 0.70)),
     ("jun-gao",           "assets/images/people/jun-gao.jpg",          (0.29, 0.11, 0.71, 0.57)),

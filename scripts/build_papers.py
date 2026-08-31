@@ -170,7 +170,7 @@ def render_page(papers: list[dict]) -> str:
     [
       render_section(
         "Oral Presentations",
-        "Selected for a talk in the morning (10:30–11:00) or afternoon (14:30–15:30) oral session, and also presented as posters.",
+        "Selected for a talk in the morning (10:30–11:00) or afternoon (14:30–15:00) oral session, and also presented as posters.",
         orals,
       ),
       render_section(

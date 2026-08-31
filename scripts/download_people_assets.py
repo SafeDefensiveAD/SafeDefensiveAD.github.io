@@ -12,11 +12,6 @@ ROOT = Path(__file__).resolve().parent.parent / "assets" / "images" / "people"
 # (filename, url, Notes for maintainers.)
 ASSETS: list[tuple[str, str, str]] = [
   (
-    "andreas-geiger.jpg",
-    "http://www.cvlibs.net/site/andreas_geiger.jpg",
-    "Andreas Geiger — personal site.",
-  ),
-  (
     "marco-pavone.jpg",
     "https://profiles.stanford.edu/proxy/api/cap/profiles/46879/resources/profilephoto/350x350.1696806908518.jpg",
     "Marco Pavone — Stanford Profiles.",
