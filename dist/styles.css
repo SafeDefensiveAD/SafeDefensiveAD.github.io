@@ -194,6 +194,14 @@ a:focus-visible {
   color: var(--accent-soft);
 }
 
+.hero-date {
+  margin: 12px 0 0;
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #e8f2ff;
+}
+
 .subtitle {
   margin: 20px 0 24px;
   max-width: 680px;
