@@ -102,12 +102,17 @@ def load_rows() -> list[dict]:
     pdf_name = entry.get("pdf")
     if pdf_name and not (PDF_DIR / pdf_name).exists():
       sys.exit(f"Missing PDF for submission {number}: {pdf_name}")
+    # papers_meta.json can override the OpenReview CSV decision (e.g. late oral upgrades).
+    if "oral" in entry:
+      is_oral = bool(entry["oral"])
+    else:
+      is_oral = "oral" in decision.lower()
     papers.append(
       {
         "number": number,
         "title": record["title"].strip(),
         "abstract": record["abstract"],
-        "is_oral": "oral" in decision.lower(),
+        "is_oral": is_oral,
         "authors": entry.get("authors") or [],
         "affiliations": entry.get("affiliations") or [],
         "pdf": pdf_name,
