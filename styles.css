@@ -609,7 +609,7 @@ main {
   padding: 0;
 }
 
-.program-rows li {
+.program-rows > li {
   display: grid;
   grid-template-columns: 112px minmax(0, 1fr);
   gap: 14px;
@@ -620,7 +620,7 @@ main {
   color: var(--text-body);
 }
 
-.program-rows li:last-child {
+.program-rows > li:last-child {
   border-bottom: none;
 }
 
@@ -646,6 +646,44 @@ main {
   content: "·";
   margin: 0 6px;
   color: #93a9c8;
+}
+
+.program-papers {
+  grid-column: 2;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 2px;
+  padding: 0;
+}
+
+.program-papers li {
+  position: relative;
+  padding-left: 15px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.program-papers li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #93a9c8;
+}
+
+.program-papers a {
+  color: #3a6eb8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.program-papers a:hover {
+  color: #2a5a9a;
+  text-decoration: underline;
 }
 
 /* —— Speakers & organizers —— */
@@ -1223,10 +1261,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .program-rows li {
+  .program-rows > li {
     grid-template-columns: 1fr;
     gap: 4px;
     padding: 10px 0;
+  }
+
+  .program-papers {
+    grid-column: 1;
   }
 
   .nav-wrap {
