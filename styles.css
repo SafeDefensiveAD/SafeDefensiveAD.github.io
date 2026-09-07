@@ -1039,6 +1039,14 @@ ul {
   color: #5a7399;
 }
 
+.award-stats .paper-stat-value {
+  color: #8a5a10;
+}
+
+.page-card-wide .award-stats {
+  margin-bottom: 16px;
+}
+
 .paper-intro {
   margin: 0 0 36px;
   max-width: 46rem;
