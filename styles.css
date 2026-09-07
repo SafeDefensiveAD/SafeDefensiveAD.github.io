@@ -648,6 +648,16 @@ main {
   color: #93a9c8;
 }
 
+.program-talk {
+  grid-column: 2;
+  margin: 6px 0 2px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #2d4a72;
+}
+
 .program-papers {
   grid-column: 2;
   list-style: none;
@@ -748,6 +758,15 @@ main {
 .person-meta {
   flex: 1;
   min-width: 0;
+}
+
+.speaker-talk {
+  margin: 0;
+  padding-top: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--accent-soft);
 }
 
 .section-light .speaker-role {
